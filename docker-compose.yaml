@@ -1,0 +1,11 @@
+version: '3'
+services:
+  front: 
+    container_name: front-container
+    build: .
+    ports: 
+      - 3000:80
+    tty: true
+    stdin_open: true
+    volumes: 
+      - ./frontend/build:/usr/share/nginx/html/
